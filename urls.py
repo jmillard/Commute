@@ -6,7 +6,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'commute.views.home', name='home'),
+    url(r'^$', 'commute.offincident.views.homepage', name='home'),
+    #url(r'^$', 'commute.citzincident.views.report'),
+    #url(r'^$', 'commute.offincident.views.official_reports'), 
     # url(r'^commute/', include('commute.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
