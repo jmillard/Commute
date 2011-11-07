@@ -9,3 +9,10 @@ def homepage(request):
         'official':official,
         'location':location,
     })
+
+def official(request):
+    official = Official.objects.order_by('incident_type')
+    return render_to_response('official_reports.html', {
+        'official':official,
+    })
+
