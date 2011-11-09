@@ -24,6 +24,6 @@ class Location(models.Model):
     state = models.ForeignKey(State)
     zipcode = models.ForeignKey(Zipcode)
     def __unicode__(self):
-        return self.location
+        return self.address
 
     
