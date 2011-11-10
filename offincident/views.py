@@ -3,11 +3,13 @@ from commute.locations.models import Location
 from django.shortcuts import render_to_response
 
 def homepage(request):
-    official = Official.objects.order_by('incident_type')
+    official = Official.objects.order_by('-pub_date')
     location = Location.objects.order_by('location')
+    incident_types = IncidentType.objects.order_by('incident_type')
     return render_to_response('homepage.html', {
         'official':official,
         'location':location,
+        'incident_types': incident_types,
     })
 
 def official_reports(request):
@@ -16,8 +18,8 @@ def official_reports(request):
         'official':official,
     })
 
-def official_reports_details(request, official_reports):
-    official = Official.objects.filter('incident_type')
+def official_reports_details(request, incident_type):
+    official = Official.objects.get(id=incident_type)
     return render_to_response('official_reports_details.html', {
         'official':official,
     })

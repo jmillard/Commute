@@ -10,6 +10,8 @@ class Cause(models.Model):
 class IncidentType(models.Model):
     incident_type = models.CharField(max_length=255)
     incident_type_slug = models.SlugField()
+    def get_absolute_url(self):
+        return "/incident-types/%s/" % self.incident_type_slug
     def __unicode__(self):
         return self.incident_type
 
@@ -19,6 +21,6 @@ class Official(models.Model):
     location = models.ForeignKey(Location, blank=True, null=True)
     cause = models.ForeignKey(Cause)
     def get_absolute_url(self):
-        return "/incident_type/%s/" % self.incident_type.incident_type
+        return "/official-reports/%i/" % self.id
     def __unicode__(self):
         return self.incident_type.incident_type
