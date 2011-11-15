@@ -11,7 +11,7 @@ class IncidentType(models.Model):
     incident_type = models.CharField(max_length=255)
     incident_type_slug = models.SlugField()
     def get_absolute_url(self):
-        return "/incident-types/%s/" % self.incident_type_slug
+        return "/incident-type/%s/" % self.incident_type_slug
     def __unicode__(self):
         return self.incident_type
 

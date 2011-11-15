@@ -5,7 +5,7 @@
 
 
 <h3>Filter by type</h3>
-{% for object in incident_types %}
+{% for object in incident_type %}
 <a href="{{ object.get_absolute_url}}">{{ object }}</a>
 {% endfor %}
 
