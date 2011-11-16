@@ -25,11 +25,13 @@ def official_reports_details(request, incident_type):
     })
 
 def incident_type(request):
-    incident_type = IncidentType.objects.order_by('-pub_date')
+    incident_type = IncidentType.objects.order_by('incident_type')
     return render_to_response('incident_type.html', {
         'incident_type':incident_type,
     })
 
-# def incident_type_details(request, official_reports):
-#    incident_type = IncidentType.objects.get(id=)
-#    return render_to_response('incident_type_details.html', {
+def incident_type_details(request, location):
+    incident_type = IncidentType.objects.get(id=incident_type)
+    return render_to_response('incident_type_details.html', {
+        'incident_type':incident_type,
+    })

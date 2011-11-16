@@ -9,5 +9,5 @@ class Report(models.Model):
     location = models.ForeignKey(Location, blank=True, null=True)
     cause = models.ForeignKey(Cause)
     def __unicode__(self):
-        return self.report
+        return self.incident_type.incident_type
 

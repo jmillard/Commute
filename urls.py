@@ -10,8 +10,9 @@ urlpatterns = patterns('',
     url(r'^report/$', 'commute.citzincident.views.report', name='report'),
     url(r'^official-reports/$', 'commute.offincident.views.official_reports', name='official_reports'), 
     url(r'^official-reports/(?P<incident_type>[-\w]+)/$', 'commute.offincident.views.official_reports_details'), 
-    url(r'^incident-type/$', 'commute.offincident.views.incident_type', name='incident_type') 
-    
+    url(r'^incident-type/$', 'commute.offincident.views.incident_type', name='incident_type'), 
+    url(r'^incident-type/(?P<location>[-\w]+)/$', 'commute.offincident.views.incident_type_details'),
+
     # url(r'^commute/', include('commute.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+
+{% block main %}
 <h2>Latest accidents</h2>
 {% for object in official %}
 <a href="{{ object.get_absolute_url}}">An accident at {{ object.location }} on {{ object.pub_date }}</a>
@@ -9,4 +12,4 @@
 <a href="{{ object.get_absolute_url}}">{{ object }}</a>
 {% endfor %}
 
-
+{% endblock %}
