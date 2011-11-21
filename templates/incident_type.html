@@ -1,3 +1,10 @@
-{% for object in incident_type %}
-{{ object }}
+
+<h2>Latest Official Reports</h2>
+{% for object in official %}
+<a href="{{ object.get_absolute_url}}">{{ object.incident_type }} at {{ object.official.location }} on {{ object.pub_date }}</a>
+{% endfor %}
+
+<h2>Lastest Citizen Reports</h2>
+{% for object in reports %}
+<a href="{{ object.get_absolute_url}}"></a>
 {% endfor %}

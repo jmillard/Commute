@@ -7,7 +7,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'commute.offincident.views.homepage', name='home'),
-    url(r'^report/$', 'commute.citzincident.views.report', name='report'),
+    url(r'^citizen-reports/$', 'commute.citzincident.views.citizen_reports', name='citizen_reports'),
+    url(r'^citizen-reports/(?P<incident_type>[-\w]+)/$', 'commute.citzincident.views.citizen_reports_details'), 
     url(r'^official-reports/$', 'commute.offincident.views.official_reports', name='official_reports'), 
     url(r'^official-reports/(?P<incident_type>[-\w]+)/$', 'commute.offincident.views.official_reports_details'), 
     url(r'^incident-type/$', 'commute.offincident.views.incident_type', name='incident_type'), 

@@ -25,8 +25,12 @@ def official_reports_details(request, incident_type):
     })
 
 def incident_type(request):
+    official = Official.objects.order_by('-pub_date')
+    location = Location.objects.order_by('location')
     incident_type = IncidentType.objects.order_by('incident_type')
     return render_to_response('incident_type.html', {
+        'official':official,
+        'location':location,
         'incident_type':incident_type,
     })
 
