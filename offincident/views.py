@@ -1,4 +1,5 @@
 from commute.offincident.models import Official, Cause, IncidentType
+from commute.citzincident.models import Report
 from commute.locations.models import Location
 from django.shortcuts import render_to_response
 
@@ -28,10 +29,12 @@ def incident_type(request):
     official = Official.objects.order_by('-pub_date')
     location = Location.objects.order_by('location')
     incident_type = IncidentType.objects.order_by('incident_type')
+    reports = Report.objects.order_by('incident_type')
     return render_to_response('incident_type.html', {
         'official':official,
         'location':location,
         'incident_type':incident_type,
+        'reports':reports,
     })
 
 def incident_type_details(request, location):

@@ -1,10 +1,13 @@
+{% extends "base.html" %}
 
+{% block main %}
 <h2>Latest Official Reports</h2>
-{% for object in official %}
-<a href="{{ object.get_absolute_url}}">{{ object.incident_type }} at {{ object.official.location }} on {{ object.pub_date }}</a>
-{% endfor %}
+<ul>{% for object in official %}
+	<li><a href="{{ object.get_absolute_url}}">{{ object.incident_type }} at {{ object.official.location }} on {{ object.pub_date }}</a></li>
+{% endfor %}</ul>
 
 <h2>Lastest Citizen Reports</h2>
-{% for object in reports %}
-<a href="{{ object.get_absolute_url}}"></a>
-{% endfor %}
+<ul>{% for object in reports %}
+	<li><a href="{{ object.get_absolute_url}}">{{ object }}</a></li>
+{% endfor %}</ul>
+{% endblock %}

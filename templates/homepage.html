@@ -2,9 +2,9 @@
 
 {% block main %}
 <h2>Latest accidents</h2>
-{% for object in official %}
-<a href="{{ object.get_absolute_url}}">{{ object.incident_type }} at {{ object.location }} on {{ object.pub_date }}</a>
-{% endfor %}
+<ul>{% for object in official %}
+	<li><a href="{{ object.get_absolute_url}}">{{ object.incident_type }} at {{ object.location }} on {{ object.pub_date }}</a></li>
+{% endfor %}</ul>
 
 
 <h3>Filter by type</h3>
