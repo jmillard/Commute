@@ -8,6 +8,6 @@
 
 <h2>Lastest Citizen Reports</h2>
 <ul>{% for object in reports %}
-	<li><a href="{{ object.get_absolute_url}}">{{ object }}</a></li>
+	<li><a href="{{ object.get_absolute_url}}">{{ object.incident_type }} at {{ object.report.location }} on {{ object.pub_date }}</a></li>
 {% endfor %}</ul>
 {% endblock %}

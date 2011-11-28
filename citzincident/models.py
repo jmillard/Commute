@@ -14,7 +14,4 @@ class Report(models.Model):
     def __unicode__(self):
         return self.incident_type.incident_type
 
-class ReportForm(ModelForm):
-    class Meta:
-        model = Report
-    
+

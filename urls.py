@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^official-reports/(?P<incident_type>[-\w]+)/$', 'commute.offincident.views.official_reports_details'), 
     url(r'^incident-type/$', 'commute.offincident.views.incident_type', name='incident_type'), 
     url(r'^incident-type/(?P<location>[-\w]+)/$', 'commute.offincident.views.incident_type_details'),
+    url(r'^report-add/$', 'commute.citzincident.views.report_add'),
 
     # url(r'^commute/', include('commute.foo.urls')),
 

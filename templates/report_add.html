@@ -1,0 +1,11 @@
+</div>
+<h1>Add Report</h1>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="/report_add/" method="post">
+{% csrf_token %}
+<table>
+{{ citizen_report_form.as_table }}
+</table>
+<input type="submit" value="Save" />
+</form>
