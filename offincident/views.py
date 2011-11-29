@@ -42,3 +42,8 @@ def incident_type_details(request, location):
     return render_to_response('incident_type_details.html', {
         'incident_type':incident_type,
     })
+
+def search(request):
+    return render_to_response('search.html', {
+        'search':search,
+   })

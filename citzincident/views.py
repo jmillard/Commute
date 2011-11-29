@@ -14,9 +14,9 @@ def citizen_reports(request):
     })
 
 def citizen_reports_details(request, incident_type):
-    reports = IncidentType.objects.get(id=incident_type)
+    reports = Report.objects.get(id=incident_type)
     return render_to_response('citizen_reports_details.html', {
-        'incident_type':incident_type,
+        'reports':reports,
     })
 
 def report_add(request):

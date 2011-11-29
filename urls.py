@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     url(r'^incident-type/$', 'commute.offincident.views.incident_type', name='incident_type'), 
     url(r'^incident-type/(?P<location>[-\w]+)/$', 'commute.offincident.views.incident_type_details'),
     url(r'^report-add/$', 'commute.citzincident.views.report_add'),
+    url(r'^search/$', 'commute.offincident.views.search'),
 
     # url(r'^commute/', include('commute.foo.urls')),
 
