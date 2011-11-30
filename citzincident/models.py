@@ -2,7 +2,6 @@ from django.db import models
 from locations.models import Location
 from offincident.models import Cause
 from offincident.models import IncidentType
-from django.forms import ModelForm
 
 class Report(models.Model):
     incident_type = models.ForeignKey(IncidentType)

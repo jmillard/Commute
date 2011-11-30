@@ -1,11 +1,13 @@
-</div>
-<h1>Add Report</h1>
+{% extends "base.html" %}
+
+{% block main %}
+<h2>Add Report</h2>
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form action="/report_add/" method="post">
-{% csrf_token %}
+<form action="/" method="post">
 <table>
-{{ citizen_report_form.as_table }}
+{{ report_form.as_table }}
 </table>
 <input type="submit" value="Save" />
 </form>
+{% endblock %}

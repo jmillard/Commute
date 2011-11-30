@@ -32,15 +32,16 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#">My Commute</a>
+          <a class="brand" href="/">My Commute</a>
 
           <ul class="nav">
             <li class="active"><a href="/">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/incident-type">Latest Reports</a></li>
+            <li><a href="#"></a></li>
+	    <li></li>
           </ul>
           <form action="">
-            <input type="text" placeholder="Search your commute" />
+            <input type="text" placeholder="Search" />
           </form>
                 </ul>
         </div>
@@ -55,35 +56,32 @@
         {% block main %}
 	<h1>My Commute</h1>
         <p>Map will go here.</p>
+	<img src="/commute/pictures/plain_map.jpg" alt="#" width="33" height="32" />
         <p><a class="btn primary large">Learn more &raquo;</a></p>
 	{% endblock %}
       </div>
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="span6">
-          <h2>Search</h2>
-           <p>Search your commute to see what's happening.</p>
-	  <p> </p>
-          <p><a class="btn" href="/search/">Search &raquo;</a></p>
-        </div>
-        <div class="span5">
-          <h2>Latest Accidents</h2>
+        <div class="span-one-third">
+          <h2>Official Reports</h2>
            <p>Check out the most recent accidents</p>
-          <p><a class="btn" href="/incident-type/">View details &raquo;</a></p>
-          <p> </p>
+          <p><a class="btn" href="/official-reports/">View details &raquo;</a></p>
        </div>
-        <div class="span4">
+        <div class="span-one-third">
+          <h2>Citizen Reports</h2>
+           <p>See what others have reported.</p>
+          <p><a class="btn" href="/citizen-reports/">Submit Report &raquo;</a></p>
+       </div>
+        <div class="span-one-third">
           <h2>Report</h2>
            <p>Something slowing your commute? Report it here for fellow commuters.</p>
-          <p> </p>
           <p><a class="btn" href="/report-add/">Submit Report &raquo;</a></p>
-       </div>
+	</div>
+     </div>
 
       <footer>
-
-        <p></p>
-
+        <p>&copy; Company 2011</p>
       </footer>
 
     </div> <!-- /container -->
