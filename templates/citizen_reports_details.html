@@ -1,7 +1,18 @@
 {% extends "base.html" %}
 
 {% block main %}
-
-<h3>{{ reports.incident_type }} at {{ reports.location }} on {{ reports.pub_date }}</h3>
+<body>
+    <div class="container-fluid">
+	<div class="sidebar">
+	    <p> </p>
+	    <h2><p>{{ reports.incident_type }}</p></h2>
+	    <h2><p>at {{ reports.location }}</p></h2>
+	    <h2><p>on {{ reports.pub_date }}</p></h2>
+	</div>
+	<div class="content">
+	    <img src="/static/Map.jpg" width=600 />
+	</div>
+    </div>
+</block>
 
 {% endblock %}

@@ -25,21 +25,21 @@ def official_reports_details(request, incident_type):
         'official':official,
     })
 
-def incident_type(request):
+def latest_reports(request):
     official = Official.objects.order_by('-pub_date')
     location = Location.objects.order_by('location')
     incident_type = IncidentType.objects.order_by('incident_type')
     reports = Report.objects.order_by('incident_type')
-    return render_to_response('incident_type.html', {
+    return render_to_response('latest_reports.html', {
         'official':official,
         'location':location,
         'incident_type':incident_type,
         'reports':reports,
     })
 
-def incident_type_details(request, location):
+def latest_reports_details(request, location):
     incident_type = IncidentType.objects.get(id=incident_type)
-    return render_to_response('incident_type_details.html', {
+    return render_to_response('latest_reports_details.html', {
         'incident_type':incident_type,
     })
 

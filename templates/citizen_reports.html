@@ -1,3 +1,18 @@
-{% for object in reports %}
-{{ object }}
-{% endfor %}
+{% extends "base.html" %}
+
+{% block main %}
+<body>
+    <div class="container-fluid">
+	<div class="sidebar">
+	    <h2>Citizen Reports</h2>
+		<ul>{% for object in reports %}
+		    <li><a href="{{ object.get_absolute_url}}">{{ object }}</a></li>
+{% endfor %}</ul>
+	</div>
+	<div class="content">
+	    <img src="/static/PlainMap.jpg" width=600/>
+	</div>
+    </div>
+</body>
+
+{% endblock %}
