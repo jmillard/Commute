@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     url(r'^latest-reports/(?P<location>[-\w]+)/$', 'commute.offincident.views.latest_reports_details'),
     url(r'^report-add/$', 'commute.citzincident.views.report_add'),
     url(r'^search/$', 'commute.offincident.views.search'),
+    url(r'^search-details/$', 'commute.offincident.views.search_details'),
 
     # url(r'^commute/', include('commute.foo.urls')),
 

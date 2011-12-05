@@ -47,3 +47,8 @@ def search(request):
     return render_to_response('search.html', {
         'search':search,
    })
+
+def search_details(request):
+    return render_to_response('search_details.html', {
+        'search_details':search_details,
+   })

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+<body>
+    <div class="container-fluid">
+	<div class="sidebar">
+	    <h2>Search Your Commute</h2>
+		<ul>          </ul>
+          <form action="">
+            <input type="text" placeholder="Start" />
+          </form>
+          <form action="">
+            <input type="text" placeholder="End" />
+          </form>
+	    <div>
+		<p><a class="btn" href="/search-details/">Search &raquo;</a></p>
+	    </div>
+	</div>
+	<div class="content">
+	    <img src="/static/PlainMap.jpg" width=600/>
+	</div>
+    </div>
+</body>
+
+{% endblock %}
