@@ -14,7 +14,7 @@ def homepage(request):
     })
 
 def official_reports(request):
-    official = Official.objects.order_by('incident_type')
+    official = Official.objects.order_by('pub_date')
     return render_to_response('official_reports.html', {
         'official':official,
     })
@@ -26,10 +26,10 @@ def official_reports_details(request, incident_type):
     })
 
 def latest_reports(request):
-    official = Official.objects.order_by('-pub_date')
+    official = Official.objects.order_by('-pub_date')[:3]
     location = Location.objects.order_by('location')
     incident_type = IncidentType.objects.order_by('incident_type')
-    reports = Report.objects.order_by('incident_type')
+    reports = Report.objects.order_by('incident_type')[:3]
     return render_to_response('latest_reports.html', {
         'official':official,
         'location':location,

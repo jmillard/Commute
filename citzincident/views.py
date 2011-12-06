@@ -9,7 +9,7 @@ from django.core.context_processors import csrf
 
 def citizen_reports(request):
     location = Location.objects.order_by('location')
-    reports = Report.objects.order_by('incident_type')
+    reports = Report.objects.order_by('pub_date')
     return render_to_response('citizen_reports.html', {
         'location':location,
         'reports':reports,

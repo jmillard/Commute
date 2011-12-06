@@ -4,18 +4,18 @@
 <body>
     <div class="container-fluid">
 	<div class="sidebar">
-	    <h3>Latest Official Reports</h3>
-		<ul>{% for object in official %}
-		    <li><a href="{{ object.get_absolute_url}}">{{ object.incident_type }} at {{ object.official.location }} on {{ object.pub_date }}</a></li>
+	        <h5>Latest Official Reports</h5>
+		    <ul>{% for object in official %}
+		        <li><a href="{{ object.get_absolute_url}}">{{ object.incident_type }} at {{ object.location }} on {{ object.pub_date }}</a></li>
 
 {% endfor %}</ul>
-	    <h3>Lastest Citizen Reports</h3>
+	    <h5>Lastest Citizen Reports</h5>
 		<ul>{% for object in reports %}
-		    <li><a href="{{ object.get_absolute_url}}">{{ object.incident_type }} at {{ object.report.location }} on {{ object.pub_date }}</a></li>
+		    <li><a href="{{ object.get_absolute_url}}">{{ object.incident_type }} at {{ object.location }} on {{ object.pub_date }}</a></li>
 {% endfor %}</ul>
 	</div>
 	<div class="content">
-	    <img src="/static/PlainMap.jpg" width=600/>
+	    <img src="/static/MapPointsLatest.jpg" width=600/>
 	</div>
     </div>
 </body>
